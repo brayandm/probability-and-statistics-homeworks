@@ -1,28 +1,26 @@
-% base class
+% Document class
 \documentclass{article}
 
-% codification
+% Encoding
 \usepackage[utf8]{inputenc}
 
-% math packages
+% Math packages
 \usepackage{amsmath, amssymb, amsthm, amsfonts}
 
-% spacing
+% Spacing controls
 \usepackage{setspace}
-\RequirePackage{setspace}
 
-% images
+% Image path and inclusion settings
 \usepackage{graphicx}
 \graphicspath{{images/}}
 
-% margins
+% Margin settings
 \usepackage[left=1in,right=1in,top=1.25in,bottom=1.25in]{geometry}
 
-% roman numerals
-\newcommand{\rom}[1]
-    {\MakeUppercase{\romannumeral #1}}
+% Custom command for Roman numerals
+\newcommand{\rom}[1]{\MakeUppercase{\romannumeral #1}}
 
-\title{Homework \#1}
+\title{Homework 1}
 \author{Brayan Durán Medina}
 \date{November 2023}
 
@@ -30,7 +28,11 @@
 
 \maketitle
 
-\break
+\newpage
+
+\tableofcontents
+
+\newpage
 
 \input{problem1.tex}
 

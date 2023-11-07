@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1699394166 "/home/brayand/Storage/School/probability-and-statistics-homeworks/Homework #1/main.tex" "main.pdf" "main" 1699394167 0
-  "/home/brayand/Storage/School/probability-and-statistics-homeworks/Homework #1/main.tex" 1699394166 567 6441b635ae0145a5b7c6162e7503007f ""
+["pdflatex"] 1699394534 "/home/brayand/Storage/School/probability-and-statistics-homeworks/Homework #1/main.tex" "main.pdf" "main" 1699394535 0
+  "/home/brayand/Storage/School/probability-and-statistics-homeworks/Homework #1/main.tex" 1699394495 627 7ba38a39530feec40c02a10f5c634b30 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -11,6 +11,7 @@
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm" 1246382020 940 75ac932a52f80982a9f8ea75d03a34cf ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm" 1246382020 940 228d6584342e91276bf566bcf9716b83 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1136768653 1328 c834bbb027764024c09d3d2bf908b5f0 ""
+  "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmex10.tfm" 1136768653 992 662f679a0b3d2d53c1b94050fdaa3f50 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm" 1136768653 1524 4414a8315f39513458b80dfc63bff03a ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm" 1136768653 1512 f21f83efb36853c0b70002322c1ab3ad ""
@@ -23,6 +24,7 @@
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm" 1136768653 1116 933a60c408fc0a863a92debe84b2d294 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm" 1136768653 1120 8b7d695260f3cff42e636090a8002094 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb" 1248133631 34811 78b52f49e893bcba91bd7581cdc144c0 ""
+  "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1248133631 32080 340ef9bf63678554ee606688e7b5339d ""
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1248133631 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb" 1248133631 36281 c355509802a035cadc5f15869451dcee ""
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
@@ -63,11 +65,13 @@
   "/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1697320792 4710157 881d30f3c679b3ae82ecfb33f956b294 ""
   "/usr/local/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1697320855 8195297 b7117b357230a3a500e9c5c8b256c23e ""
   "/usr/local/texlive/2023/texmf.cnf" 1697320788 455 5b996dcaa0eb4ef14a83b026bc0a008c ""
-  "main.aux" 1699394167 32 044b7f8fc9779af7531264e0c5c84b6d "pdflatex"
-  "main.tex" 1699394166 567 6441b635ae0145a5b7c6162e7503007f ""
-  "problem1.tex" 1699393677 1129 af18b6120b2216042302a6dca7de0fc2 ""
+  "main.aux" 1699394535 114 9f968ade7baaa55bb9240d7f1c17066e "pdflatex"
+  "main.tex" 1699394495 627 7ba38a39530feec40c02a10f5c634b30 ""
+  "main.toc" 1699394535 41 f14c2872b18138ce9fa782e37b84b6f3 "pdflatex"
+  "problem1.tex" 1699394534 1172 1444d71cb9444ee431784f44421d499a ""
   (generated)
   "main.aux"
   "main.log"
   "main.pdf"
+  "main.toc"
   (rewritten before read)
