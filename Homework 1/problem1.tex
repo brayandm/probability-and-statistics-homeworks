@@ -43,12 +43,12 @@ In other words, we have that:
 To calculate $P(x_1 < \frac{1}{3})$ we can notice that $x_1$ is
 uniformly distributed in $[0,1]$ with only three digits after the
 decimal point. Then the total number of possible values for $x_1$ is
-$1000$ (because we can make a bijection between a number with three
+$1001$ (because we can make a bijection between a number with three
 digits after the decimal point in range $[0,1]$ with a number in
 range $[0,1000]$ just multiplying by $1000$).
 
 Then the number of possible values for $x_1$ less than $\frac{1}{3}$
-is $333$ (because we can make a bijection between a number with three
+is $334$ (because we can make a bijection between a number with three
 digits after the decimal point in range $[0,\frac{1}{3}]$ with a
 number in range $[0,333]$ just multiplying by $1000$).
 
@@ -56,7 +56,7 @@ Then we have that:
 
 \begin{equation*}
     \begin{split}
-        P(x_1 < \frac{1}{3}) & = \frac{333}{1000} \\
+        P(x_1 < \frac{1}{3}) & = \frac{334}{1001} \\
     \end{split}
 \end{equation*}
 
@@ -65,7 +65,7 @@ the same distribution as $x_1$, so we have that:
 
 \begin{equation*}
     \begin{split}
-        P(x_4 < \frac{1}{3}) & = \frac{333}{1000} \\
+        P(x_4 < \frac{1}{3}) & = \frac{334}{1001} \\
     \end{split}
 \end{equation*}
 
@@ -74,9 +74,9 @@ Then we have that:
 \begin{equation*}
     \begin{split}
         P(\max(x_1, x_4) < \frac{1}{3}) & = P(x_1 < \frac{1}{3}) \cdot P(x_4 < \frac{1}{3}) \\
-                                        & = \frac{333}{1000} \cdot \frac{333}{1000}         \\
-                                        & = \frac{333^2}{1000^2}                            \\
-                                        & = \frac{110889}{1000000}                          \\
-                                        & = 0.110889
+                                        & = \frac{334}{1001} \cdot \frac{334}{1001}         \\
+                                        & = \frac{334^2}{1001^2}                            \\
+                                        & = \frac{111556}{1002001}                          \\
+                                        & = 0.11133322222
     \end{split}
 \end{equation*}
