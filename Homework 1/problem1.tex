@@ -80,3 +80,82 @@ Then we have that:
                                         & = 0.11133322222
     \end{split}
 \end{equation*}
+
+\textbf{2)} Let's notice that $x_1$ and $x_2$ are independent
+random variables, and they are both uniformly distributed in $[0,1]$
+with only three digits after the decimal point.
+
+So we have that $\min(x_1, x_2)$ should be less than $\frac{1}{3}$.
+But let's do the reverse, let's calculate the probability that
+$\min(x_1, x_2)$ is greater or equal than $\frac{1}{3}$, and then
+substract it from $1$.
+
+Then $x_1$ and $x_2$ should be both greater or equal than
+$\frac{1}{3}$, because if one of them is less than $\frac{1}{3}$, then
+the minimum will be less than $\frac{1}{3}$.
+
+Then because $x_1$ and $x_2$ are independent, we have can calculate
+sepately the probability that $x_1$ is greater or equal than
+$\frac{1}{3}$ and the probability that $x_2$ is greater or equal than
+$\frac{1}{3}$, and then multiply them together.
+
+In other words, we have that:
+
+\begin{equation*}
+    \begin{split}
+        P(\min(x_1, x_2) \geq \frac{1}{3}) & = P(x_1 \geq \frac{1}{3} \cap x_2 \geq \frac{1}{3})     \\
+                                           & = P(x_1 \geq \frac{1}{3}) \cdot P(x_2 \geq \frac{1}{3}) \\
+    \end{split}
+\end{equation*}
+
+To calculate $P(x_1 \geq \frac{1}{3})$ we can notice that $x_1$ is
+uniformly distributed in $[0,1]$ with only three digits after the
+decimal point. Then the total number of possible values for $x_1$ is
+$1001$ (because we can make a bijection between a number with three
+digits after the decimal point in range $[0,1]$ with a number in
+range $[0,1000]$ just multiplying by $1000$).
+
+Then the number of possible values for $x_1$ greater or equal than
+$\frac{1}{3}$ is $667$ (because we can make a bijection between a number with three
+digits after the decimal point in range $[\frac{1}{3},1]$ with a
+number in range $[334,1000]$ just multiplying by $1000$)
+
+Then we have that:
+
+\begin{equation*}
+    \begin{split}
+        P(x_1 \geq \frac{1}{3}) & = \frac{667}{1001} \\
+    \end{split}
+\end{equation*}
+
+To calculate $P(x_2 \geq \frac{1}{3})$ we can notice that $x_2$ has
+the same distribution as $x_1$, so we have that:
+
+\begin{equation*}
+    \begin{split}
+        P(x_2 \geq \frac{1}{3}) & = \frac{667}{1001} \\
+    \end{split}
+\end{equation*}
+
+Then we have that:
+
+\begin{equation*}
+    \begin{split}
+        P(\min(x_1, x_2) \geq \frac{1}{3}) & = P(x_1 \geq \frac{1}{3}) \cdot P(x_2 \geq \frac{1}{3}) \\
+                                           & = \frac{667}{1001} \cdot \frac{667}{1001}               \\
+                                           & = \frac{667^2}{1001^2}                                  \\
+                                           & = \frac{444889}{1002001}                                \\
+                                           & = 0.44400055489
+    \end{split}
+\end{equation*}
+
+Then we have that:
+
+\begin{equation*}
+    \begin{split}
+        P(\min(x_1, x_2) < \frac{1}{3}) & = 1 - P(\min(x_1, x_2) \geq \frac{1}{3}) \\
+                                        & = 1 - 0.44400055489                      \\
+                                        & = 0.55599944511
+    \end{split}
+\end{equation*}
+
