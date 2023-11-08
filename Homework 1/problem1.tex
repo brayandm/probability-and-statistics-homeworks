@@ -159,3 +159,100 @@ Then we have that:
     \end{split}
 \end{equation*}
 
+\textbf{3)} Let's notice that $x_1$ and $x_3$ are independent
+random variables, and they are both uniformly distributed in $[0,1]$
+with only three digits after the decimal point.
+
+So we have that $\max(x_1, x_3)$ should be in $[ \frac{1}{4}, \frac{3}{4} ]$.
+But notice that we can decompose the problem by calculating the
+probability that $\max(x_1, x_3)$ is less or equal than $\frac{3}{4}$ and
+substracting the probability that $\max(x_1, x_3)$ is less than
+$\frac{1}{4}$.
+
+Then we have that:
+
+\begin{equation*}
+    \begin{split}
+        P(\frac{1}{4}\leq\max(x_1, x_3)\leq\frac{3}{4}) & = P(\max(x_1, x_3) \leq \frac{3}{4}) - P(\max(x_1, x_3) < \frac{1}{4}) \\
+    \end{split}
+\end{equation*}
+
+Then by previous results we have that:
+
+\begin{equation*}
+    \begin{split}
+        P(\frac{1}{4}\leq\max(x_1, x_3)\leq\frac{3}{4}) & = P(\max(x_1, x_3) \leq \frac{3}{4}) - P(\max(x_1, x_3) < \frac{1}{4})                                    \\
+                                                        & = P(x_1 \leq \frac{3}{4} \cap x_3 \leq \frac{3}{4}) - P(x_1 < \frac{1}{4} \cap x_3 < \frac{1}{4})         \\
+                                                        & = P(x_1 \leq \frac{3}{4}) \cdot P(x_3 \leq \frac{3}{4}) - P(x_1 < \frac{1}{4}) \cdot P(x_3 < \frac{1}{4}) \\
+    \end{split}
+\end{equation*}
+
+To calculate $P(x_1 \leq \frac{3}{4})$ we can notice that $x_1$ is
+uniformly distributed in $[0,1]$ with only three digits after the
+decimal point. Then the total number of possible values for $x_1$ is
+$1001$ (because we can make a bijection between a number with three
+
+Then the number of possible values for $x_1$ less or equal than
+$\frac{3}{4}$ is $751$ (because we can make a bijection between a number with three
+digits after the decimal point in range $[0,\frac{3}{4}]$ with a
+number in range $[0,750]$ just multiplying by $1000$).
+
+Then we have that:
+
+\begin{equation*}
+    \begin{split}
+        P(x_1 \leq \frac{3}{4}) & = \frac{751}{1001} \\
+    \end{split}
+\end{equation*}
+
+To calculate $P(x_3 \leq \frac{3}{4})$ we can notice that $x_3$ has
+the same distribution as $x_1$, so we have that:
+
+\begin{equation*}
+    \begin{split}
+        P(x_3 \leq \frac{3}{4}) & = \frac{751}{1001} \\
+    \end{split}
+\end{equation*}
+
+To calculate $P(x_1 < \frac{1}{4})$ we can notice that $x_1$ is
+uniformly distributed in $[0,1]$ with only three digits after the
+decimal point. Then the total number of possible values for $x_1$ is
+$1001$ (because we can make a bijection between a number with three
+digits after the decimal point in range $[0,1]$ with a number in
+range $[0,1000]$ just multiplying by $1000$).
+
+Then the number of possible values for $x_1$ less than $\frac{1}{4}$
+is $250$ (because we can make a bijection between a number with three
+digits after the decimal point in range $[0,\frac{1}{4})$ with a
+number in range $[0,249]$ just multiplying by $1000$).
+
+Then we have that:
+
+\begin{equation*}
+    \begin{split}
+        P(x_1 < \frac{1}{4}) & = \frac{250}{1001} \\
+    \end{split}
+\end{equation*}
+
+To calculate $P(x_3 < \frac{1}{4})$ we can notice that $x_3$ has
+the same distribution as $x_1$, so we have that:
+
+\begin{equation*}
+    \begin{split}
+        P(x_3 < \frac{1}{4}) & = \frac{250}{1001} \\
+    \end{split}
+\end{equation*}
+
+Then we have that:
+
+\begin{equation*}
+    \begin{split}
+        P(\frac{1}{4}\leq\max(x_1, x_3)\leq\frac{3}{4}) & = P(x_1 \leq \frac{3}{4}) \cdot P(x_3 \leq \frac{3}{4}) - P(x_1 < \frac{1}{4}) \cdot P(x_3 < \frac{1}{4}) \\
+                                                        & = \frac{751}{1001} \cdot \frac{751}{1001} - \frac{250}{1001} \cdot \frac{250}{1001}                       \\
+                                                        & = \frac{751^2}{1001^2} - \frac{250^2}{1001^2}                                                             \\
+                                                        & = \frac{751^2 - 250^2}{1001^2}                                                                            \\
+                                                        & = \frac{564001 - 62500}{1002001}                                                                          \\
+                                                        & = \frac{501501}{1002001}                                                                                  \\
+                                                        & = 0.5004995005
+    \end{split}
+\end{equation*}
