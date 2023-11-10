@@ -3,6 +3,33 @@
 
 \textbf{Statement:}
 
-$\quad P(\overline{A}) = \frac{3}{4}, \quad P(B|A) = \frac{1}{3}; \text{ find } P(A\overline{B})$
+$\quad P(\overline{A}) = \frac{3}{4}, \quad P(B|A) = \frac{1}{3}; \text{ find } P(A\cap\overline{B})$
 
 \noindent\textbf{Solution:}
+
+By complement rule we have $P(\overline{A}) = 1 - P(A)$:
+
+\begin{equation*}
+    P(A) = 1 - P(\overline{A}) = 1 - \frac{3}{4} = \frac{1}{4}
+\end{equation*}
+
+By conditional probability definition we have $P(B|A) = \frac{P(A\cap B)}{P(A)}$:
+
+\begin{equation*}
+    P(A\cap B) = P(B|A)P(A) = \frac{1}{3} \cdot \frac{1}{4} = \frac{1}{12}
+\end{equation*}
+
+By law of total probability we have $P(A) = \sum_{i=1}^n P(A|B_i)P(B_i)$, where
+$\bigcup_{i=1}^n B_i = \Omega$ and $B_i \cap B_j = \emptyset$ for $i \neq j$.
+
+So because $B \cup \overline{B} = \Omega$ and $B \cap \overline{B} = \emptyset$ we have:
+
+\begin{equation*}
+    \begin{split}
+        P(A)                 & = P(A|B)P(B) + P(A|\overline{B})P(\overline{B}) \\
+        P(A)                 & = P(A\cap B) + P(A\cap\overline{B})             \\
+        P(A\cap\overline{B}) & = P(A) - P(A\cap B)                             \\
+        P(A\cap\overline{B}) & = \frac{1}{4} - \frac{1}{12}                    \\
+        P(A\cap\overline{B}) & = \frac{1}{6}
+    \end{split}
+\end{equation*}
