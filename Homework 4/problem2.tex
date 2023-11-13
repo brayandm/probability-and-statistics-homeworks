@@ -56,3 +56,52 @@ Let $\xi, \eta : \Omega \rightarrow \mathbb{R}$.
 \begin{itemize}
     \item Since the above relationship holds for all values \( a \) and \( b \), it follows that \(\xi^2\) and \(\eta^2\) are independent.
 \end{itemize}
+
+\subsection*{Solution: 5.5.2}
+
+\textbf{Proof:}
+
+\textit{Given:}
+\begin{itemize}
+    \item \(\xi\) and \(\eta\) are independent random variables.
+    \item A function \(f : \mathbb{R} \rightarrow \mathbb{R}\).
+\end{itemize}
+
+\textit{To Prove:}
+\begin{itemize}
+    \item The random variables \(f(\xi)\) and \(f(\eta)\) are independent.
+\end{itemize}
+
+\textit{Proof:}
+\begin{enumerate}
+    \item \textbf{Definition of Independence:}
+          \begin{itemize}
+              \item Two random variables \(X\) and \(Y\) are independent if for every pair of Borel sets \(A\) and \(B\), \(P(X \in A \text{ and } Y \in B) = P(X \in A) \cdot P(Y \in B)\).
+          \end{itemize}
+
+    \item \textbf{Applying to \(f(\xi)\) and \(f(\eta)\):}
+          \begin{itemize}
+              \item Given that \(\xi\) and \(\eta\) are independent, for any Borel sets \(A\) and \(B\), we have \(P(\xi \in A \text{ and } \eta \in B) = P(\xi \in A) \cdot P(\eta \in B)\).
+          \end{itemize}
+
+    \item \textbf{Transformation by \(f\):}
+          \begin{itemize}
+              \item Consider the transformed variables \(f(\xi)\) and \(f(\eta)\). For any Borel sets \(C\) and \(D\) in the range of \(f\), we can find corresponding sets \(A\) and \(B\) in the domain of \(f\) such that \(f^{-1}(C) = A\) and \(f^{-1}(D) = B\).
+          \end{itemize}
+
+    \item \textbf{Independence of Transformed Variables:}
+          \begin{itemize}
+              \item Since \(\xi\) and \(\eta\) are independent, we have:
+                    \[ P(\xi \in f^{-1}(C) \text{ and } \eta \in f^{-1}(D)) = P(\xi \in f^{-1}(C)) \cdot P(\eta \in f^{-1}(D)) \]
+              \item This can be rewritten as:
+                    \[ P(f(\xi) \in C \text{ and } f(\eta) \in D) = P(f(\xi) \in C) \cdot P(f(\eta) \in D) \]
+              \item This shows that \(f(\xi)\) and \(f(\eta)\) are independent.
+          \end{itemize}
+\end{enumerate}
+
+\textit{Conclusion:}
+\begin{itemize}
+    \item If \(\xi\) and \(\eta\) are independent random variables, then for an arbitrary function \(f : \mathbb{R} \rightarrow \mathbb{R}\), the random variables \(f(\xi)\) and \(f(\eta)\) are also independent.
+\end{itemize}
+
+\end{document}
