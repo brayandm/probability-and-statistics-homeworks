@@ -104,4 +104,24 @@ Let $\xi, \eta : \Omega \rightarrow \mathbb{R}$.
     \item If \(\xi\) and \(\eta\) are independent random variables, then for an arbitrary function \(f : \mathbb{R} \rightarrow \mathbb{R}\), the random variables \(f(\xi)\) and \(f(\eta)\) are also independent.
 \end{itemize}
 
-\end{document}
+
+\subsection*{Solution: 5.5.3}
+
+To find a counterexample to the statement "If $\xi$ and $\eta$ are dependent, then $\xi^2$ and $\eta^2$ are necessarily dependent," we consider the following:
+
+Let $\xi$ be a random variable that takes values 1 and -1 with equal probability, i.e.,
+\[ P(\xi = 1) = P(\xi = -1) = 0.5. \]
+
+Define $\eta$ as $\eta = \xi$. Thus, $\eta$ is completely dependent on $\xi$.
+
+Now, consider $\xi^2$ and $\eta^2$:
+\begin{itemize}
+    \item $\xi^2$ will always be 1, since squaring either 1 or -1 results in 1.
+    \item Similarly, $\eta^2$ will always be 1, since $\eta$ is equal to $\xi$.
+\end{itemize}
+
+Therefore, $\xi^2$ and $\eta^2$ are both constant random variables. Constant random variables are independent of any other random variable, including each other, because the occurrence of any particular value of one does not affect the probability distribution of the other.
+
+Hence, $\xi^2$ and $\eta^2$ are independent, even though $\xi$ and $\eta$ are dependent. This serves as a counterexample to the original statement.
+
+
