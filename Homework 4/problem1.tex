@@ -5,13 +5,60 @@
 
 Let $1_A$ $1_B$ be indicators of the events $A$, $B \subset \Omega$. Find the erroneous statements:
 
-1. $1_A \cdot 1_B = 1_{AB}$
+1. $1_A \cdot 1_B = 1_{A\cap B}$
 
 2. $1_A \cdot 1_A = 1_A$
 
-3. $1_A + 1_B = 1_{A+B}$
+3. $1_A + 1_B = 1_{A\cup B}$
 
 4. $1_A \cdot (1 - 1_B) = 1_{A\setminus B}$
 
 
 \subsection*{Solution: 5.3.1}
+
+We have that $1_A \cdot 1_B = 1$ if and only if $1_A = 1$ and $1_B = 1$.
+Because if some of them is $0$, then the product is $0$.
+
+
+We have that $1_{A\cap B} = 1$ if and only if both events $A$ and $B$ occur, this
+is the same as $1_A = 1$ and $1_B = 1$.
+
+Then both $1_A \cdot 1_B$ and $1_{A\cap B}$ are equal to $1$ if and only if
+$1_A = 1$ and $1_B = 1$, and they are equal to $0$ otherwise.
+
+So the first statement is \textbf{true}.
+
+
+\subsection*{Solution: 5.3.2}
+
+We have that $1_A \cdot 1_A = 1$ if and only if $1_A = 1$.
+Because if $1_A = 0$, then the product is $0$.
+
+We have that $1_A = 1$ if and only if the event $A$ occurs.
+
+So $1_A \cdot 1_A$ and $1_A$ are equal to $1$ if and only if the event $A$ occurs,
+and they are equal to $0$ otherwise.
+
+So the second statement is \textbf{true}.
+
+
+\subsection*{Solution: 5.3.3}
+
+Here if the events $A$ and $B$ occur, then $1_A + 1_B = 2$, and because the indicator function
+is always $1$ or $0$ then formula $1_A + 1_B = 1_{A\cup B}$ can not be true.
+
+So the third statement is \textbf{false}.
+
+
+\subsection*{Solution: 5.3.4}
+
+We have that $1_A \cdot (1 - 1_B) = 1$ if and only if $1_A = 1$ and $1_B = 0$.
+Because if $1_A = 0$ or $1_B = 1$, then the product is $0$.
+
+We have that $1_{A\setminus B} = 1$ if and only if the event $A$ occurs
+and the event $B$ does not occur (by definition of the set difference).
+
+So $1_A \cdot (1 - 1_B)$ and $1_{A\setminus B}$ are equal to $1$ if and only if
+the event $A$ occurs and the event $B$ does not occur, and they are equal to $0$ otherwise.
+
+So the fourth statement is \textbf{true}.
