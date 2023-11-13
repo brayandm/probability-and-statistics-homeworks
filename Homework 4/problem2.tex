@@ -12,3 +12,47 @@ Let $\xi, \eta : \Omega \rightarrow \mathbb{R}$.
 
 
 \subsection*{Solution: 5.5.1}
+
+\textbf{Proof:}
+
+\textit{Given:}
+\begin{itemize}
+    \item \(\xi\) and \(\eta\) are independent random variables.
+    \item Independence is defined as: For all values \( x \) and \( y \),
+          $$ P(\xi = x \text{ and } \eta = y) = P(\xi = x) \cdot P(\eta = y) $$
+\end{itemize}
+
+\textit{To Prove:}
+\begin{itemize}
+    \item \(\xi^2\) and \(\eta^2\) are independent.
+\end{itemize}
+
+\textit{Proof:}
+\begin{enumerate}
+    \item \textbf{Decomposing the Events for Squares}:
+          \begin{itemize}
+              \item The event \(\xi^2 = a\) occurs if and only if \(\xi = \sqrt{a}\) or \(\xi = -\sqrt{a}\), assuming \(a\) is a non-negative number. Similarly, \(\eta^2 = b\) occurs if and only if \(\eta = \sqrt{b}\) or \(\eta = -\sqrt{b}\).
+          \end{itemize}
+    \item \textbf{Using Independence of \(\xi\) and \(\eta\)}:
+          \begin{itemize}
+              \item Since \(\xi\) and \(\eta\) are independent, the event \(\xi = \sqrt{a}\) or \(\xi = -\sqrt{a}\) is independent of the event \(\eta = \sqrt{b}\) or \(\eta = -\sqrt{b}\).
+          \end{itemize}
+    \item \textbf{Probability of Union of Independent Events}:
+          \begin{itemize}
+              \item For two independent events \(X\) and \(Y\), the probability of both occurring is the product of their individual probabilities: \(P(X \text{ and } Y) = P(X) \cdot P(Y)\).
+          \end{itemize}
+    \item \textbf{Applying to Squares}:
+          \begin{itemize}
+              \item Applying this to our case, we get:
+                    \[ P(\xi^2 = a \text{ and } \eta^2 = b) = P((\xi = \sqrt{a} \text{ or } \xi = -\sqrt{a}) \text{ and } (\eta = \sqrt{b} \text{ or } \eta = -\sqrt{b})) \]
+              \item Since the events \(\xi = \sqrt{a}\) or \(\xi = -\sqrt{a}\) and \(\eta = \sqrt{b}\) or \(\eta = -\sqrt{b}\) are independent, this simplifies to:
+                    \[ P(\xi^2 = a \text{ and } \eta^2 = b) = P(\xi = \sqrt{a} \text{ or } \xi = -\sqrt{a}) \cdot P(\eta = \sqrt{b} \text{ or } \eta = -\sqrt{b}) \]
+              \item So replacing back we get:
+                    \[ P(\xi^2 = a \text{ and } \eta^2 = b) = P(\xi^2 = a) \cdot P(\eta^2 = b) \]
+          \end{itemize}
+\end{enumerate}
+
+\textit{Conclusion:}
+\begin{itemize}
+    \item Since the above relationship holds for all values \( a \) and \( b \), it follows that \(\xi^2\) and \(\eta^2\) are independent.
+\end{itemize}
