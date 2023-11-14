@@ -1,0 +1,54 @@
+% Document class
+\documentclass{article}
+
+% Encoding
+\usepackage[utf8]{inputenc}
+
+% Math packages
+\usepackage{amsmath, amssymb, amsthm, amsfonts}
+
+% Spacing controls
+\usepackage{setspace}
+
+% Image path and inclusion settings
+\usepackage{graphicx}
+\graphicspath{{images/}}
+
+% Margin settings
+\usepackage[left=1in,right=1in,top=1.25in,bottom=1.25in]{geometry}
+
+% Custom command for Roman numerals
+\newcommand{\rom}[1]{\MakeUppercase{\romannumeral #1}}
+
+% Links
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=black,
+    urlcolor=black, 
+    citecolor=black
+}
+
+\usepackage{float}
+
+\setlength{\parskip}{1em}
+\setstretch{1.5}
+
+\title{Homework 5}
+\author{Brayan Durán Medina}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+\input{problem1.tex}
+
+\end{document}

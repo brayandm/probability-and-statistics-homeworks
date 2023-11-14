@@ -1,0 +1,83 @@
+\section*{Problem 1}
+\addcontentsline{toc}{section}{Problem 1}
+
+\subsection*{Statement: 1}
+
+Derive formulas how to compute Expectation of second moment, third moment and Dispersion using Generating functions
+
+\subsection*{Solution: 1.1}
+
+\textbf{Second Moment}:
+
+We need to calculate the second moment of a random variable \( \xi \), which is defined as:
+
+\[ E(\xi^2) = \sum_{i=0}^{\infty} i^2 \cdot P(\xi = i) \]
+
+Now we have the formula for the generating function of \( \xi \):
+
+\[ G_{\xi}(x) = \sum_{i=0}^{\infty} P(\xi = i) \cdot x^i \]
+
+Let's find the first and second derivatives of \( G_{\xi}(x) \):
+
+
+\[ G'_{\xi}(x) = \sum_{i=0}^{\infty} i \cdot P(\xi = i) \cdot x^{i-1} \]
+
+\[ G''_{\xi}(x) = \sum_{i=0}^{\infty} i \cdot (i-1) \cdot P(\xi = i) \cdot x^{i-2} \]
+
+Then if we multiply \( G'_\xi(x) \) by \( x \) and \( G''_\xi(x) \) by \( x^2 \), we get:
+
+\[ x \cdot G'_{\xi}(x) = \sum_{i=0}^{\infty} i \cdot P(\xi = i) \cdot x^{i} \]
+
+\[ x^2 \cdot G''_{\xi}(x) = \sum_{i=0}^{\infty} i \cdot (i-1) \cdot P(\xi = i) \cdot x^{i} \]
+
+Now if we add these two equations, we get:
+
+\[ x \cdot G'_{\xi}(x) + x^2 \cdot G''_{\xi}(x) = \sum_{i=0}^{\infty} i \cdot P(\xi = i) \cdot x^{i} + \sum_{i=0}^{\infty} i \cdot (i-1) \cdot P(\xi = i) \cdot x^{i} = \sum_{i=0}^{\infty} i^2 \cdot P(\xi = i) \cdot x^{i} \]
+
+Then replacing $x$ with $1$ we get:
+
+\[ 1 \cdot G'_{\xi}(1) + 1^2 \cdot G''_{\xi}(1) = \sum_{i=0}^{\infty} i^2 \cdot P(\xi = i) \cdot 1^{i} = \sum_{i=0}^{\infty} i^2 \cdot P(\xi = i) \]
+
+So we get:
+
+\[ E(\xi^2) = G'_{\xi}(1) + G''_{\xi}(1) \]
+
+\textbf{Third Moment}:
+
+We need to calculate the third moment of a random variable \( \xi \), which is defined as:
+
+\[ E(\xi^3) = \sum_{i=0}^{\infty} i^3 \cdot P(\xi = i) \]
+
+Now we have the formula for the generating function of \( \xi \):
+
+\[ G_{\xi}(x) = \sum_{i=0}^{\infty} P(\xi = i) \cdot x^i \]
+
+Let's find the first, second and third derivatives of \( G_{\xi}(x) \):
+
+\[ G'_{\xi}(x) = \sum_{i=0}^{\infty} i \cdot P(\xi = i) \cdot x^{i-1} \]
+
+\[ G''_{\xi}(x) = \sum_{i=0}^{\infty} i \cdot (i-1) \cdot P(\xi = i) \cdot x^{i-2} \]
+
+\[ G'''_{\xi}(x) = \sum_{i=0}^{\infty} i \cdot (i-1) \cdot (i-2) \cdot P(\xi = i) \cdot x^{i-3} \]
+
+Then if we multiply \( G'_\xi(x) \) by \( x \), \( G''_\xi(x) \) by \( x^2 \) and \( G'''_\xi(x) \) by \( x^3 \), we get:
+
+\[ x \cdot G'_{\xi}(x) = \sum_{i=0}^{\infty} i \cdot P(\xi = i) \cdot x^{i} \]
+
+\[ x^2 \cdot G''_{\xi}(x) = \sum_{i=0}^{\infty} i \cdot (i-1) \cdot P(\xi = i) \cdot x^{i} \]
+
+\[ x^3 \cdot G'''_{\xi}(x) = \sum_{i=0}^{\infty} i \cdot (i-1) \cdot (i-2) \cdot P(\xi = i) \cdot x^{i} \]
+
+Note that if we add the first equation plus three times the second equation plus the third equation, we get:
+
+\[ x \cdot G'_{\xi}(x) + 3 \cdot x^2 \cdot G''_{\xi}(x) + x^3 \cdot G'''_{\xi}(x) = \sum_{i=0}^{\infty} i \cdot P(\xi = i) \cdot x^{i} + \sum_{i=0}^{\infty} 3 \cdot i \cdot (i-1) \cdot P(\xi = i) \cdot x^{i} + \sum_{i=0}^{\infty} i \cdot (i-1) \cdot (i-2) \cdot P(\xi = i) \cdot x^{i} \]
+
+\[ = \sum_{i=0}^{\infty} i^3 \cdot P(\xi = i) \cdot x^{i} \]
+
+Then replacing $x$ with $1$ we get:
+
+\[ 1 \cdot G'_{\xi}(1) + 3 \cdot 1^2 \cdot G''_{\xi}(1) + 1^3 \cdot G'''_{\xi}(1) = \sum_{i=0}^{\infty} i^3 \cdot P(\xi = i) \cdot 1^{i} = \sum_{i=0}^{\infty} i^3 \cdot P(\xi = i) \]
+
+So we get:
+
+\[ E(\xi^3) = G'_{\xi}(1) + 3 \cdot G''_{\xi}(1) + G'''_{\xi}(1) \]
