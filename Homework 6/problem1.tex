@@ -1,0 +1,207 @@
+\section*{Problem 1}
+\addcontentsline{toc}{section}{Problem 1}
+
+Let we have two r.v. as mappings from $[0,1] \to \mathbb{R}$, $\xi$ and $\eta$.
+
+Let there are explicit formulas for them as $x^3$ and $x^2$.
+
+% 1) Find the expectations $E(\xi)$, $E(\eta)$?
+
+% 2) Whether $\xi$ and $\eta$ are dependent?
+
+% 3) Find the explicit formulas for their distributions functions.
+
+% 4) Use the formula to compute expectations by formula of distribution function and compare the results
+
+\subsection*{Find the expectations $E(\xi)$, $E(\eta)$?}
+
+We have that the expectation of a r.v. is defined as:
+
+\begin{equation*}
+    E(\xi) = \int_{-\infty}^{\infty} g(x) f(x) dx
+\end{equation*}
+
+Where $g(x)$ is the function of the r.v. and $f(x)$ is the probability density function.
+
+In our case, we have that $g(x) = x^3$ and $f(x) = 1$ (because the r.v. is uniformly distributed).
+
+And because the range of the r.v. is $[0,1]$, we have that the expectation is:
+
+\begin{equation*}
+    E(\xi) = \int_{0}^{1} x^3 dx = \frac{x^4}{4} \Big|_{0}^{1} = \frac{1}{4}
+\end{equation*}
+
+And for $\eta$:
+
+\begin{equation*}
+    E(\eta) = \int_{0}^{1} x^2 dx = \frac{x^3}{3} \Big|_{0}^{1} = \frac{1}{3}
+\end{equation*}
+
+\subsection*{Whether $\xi$ and $\eta$ are dependent?}
+
+We can check this dependency by counterexample.
+
+Let take the set H = [0, 1/2]
+
+For $\xi$ and $\eta$ to be independent, we need that:
+
+\begin{equation*}
+    P(\xi \in H, \eta \in H) = P(\xi \in H) P(\eta \in H)
+\end{equation*}
+
+because in other case, they are dependent, due to the definition
+of independence of r.v.
+
+Now let's use the inverse image of $\xi$ and $\eta$:
+
+\begin{equation*}
+    P(x \in \xi^{-1}(H), x \in \eta^{-1}(H)) = P(x \in \xi^{-1}(H)) P(x \in \eta^{-1}(H))
+\end{equation*}
+
+In the left side of the equation, we have that $\xi^{-1}(H) = [0, \sqrt[3]{1/2}]$ and $\eta^{-1}(H) = [0, \sqrt{1/2}]$.
+
+So:
+
+\begin{equation*}
+    P(x \in \xi^{-1}(H), x \in \eta^{-1}(H)) = P(x \in [0, \sqrt[3]{1/2}] \cap [0, \sqrt{1/2}]) = P(x \in [0, \sqrt[3]{1/2}]) = \sqrt[3]{1/2}
+\end{equation*}
+
+In the right side of the equation, we have that $P(x \in \xi^{-1}(H)) = P(x \in [0, \sqrt[3]{1/2}]) = \sqrt[3]{1/2}$ and $P(x \in \eta^{-1}(H)) = P(x \in [0, \sqrt{1/2}]) = \sqrt{1/2}$.
+
+So:
+
+\begin{equation*}
+    P(x \in \xi^{-1}(H)) P(x \in \eta^{-1}(H)) = \sqrt[3]{1/2} \sqrt{1/2} = \sqrt[6]{1/32}
+\end{equation*}
+
+So we have that:
+
+\begin{equation*}
+    \sqrt[3]{1/2} \neq \sqrt[6]{1/32}
+\end{equation*}
+
+So $\xi$ and $\eta$ are dependent.
+
+\subsection*{Find the explicit formulas for their distributions functions.}
+
+Let's find the distribution function for $\xi$:
+
+From the definition of distribution function, we have that:
+
+\begin{equation*}
+    F_{\xi}(w) = P(\xi \leq w)
+\end{equation*}
+
+And because $\xi = x^3$, and $x \in [0,1]$, we have that:
+
+\begin{equation*}
+    F_{\xi}(w) = P(x^3 \leq w) = P(x \leq \sqrt[3]{w})
+\end{equation*}
+
+Then we have three cases:
+
+for $w < 0$, $F_{\xi}(w) = 0$
+
+for $0 \leq w \leq 1$, $F_{\xi}(w) = P(x \leq \sqrt[3]{w}) = \sqrt[3]{w}$
+
+for $w > 1$, $F_{\xi}(w) = 1$
+
+So we have that:
+
+\begin{equation*}
+    F_{\xi}(w) = \begin{cases}
+        0           & \text{if } w < 0           \\
+        \sqrt[3]{w} & \text{if } 0 \leq w \leq 1 \\
+        1           & \text{if } w > 1
+    \end{cases}
+\end{equation*}
+
+Let's find the distribution function for $\eta$:
+
+From the definition of distribution function, we have that:
+
+\begin{equation*}
+    F_{\eta}(w) = P(\eta \leq w)
+\end{equation*}
+
+And because $\eta = x^2$, and $x \in [0,1]$, we have that:
+
+\begin{equation*}
+    F_{\eta}(w) = P(x^2 \leq w) = P(x \leq \sqrt{w})
+\end{equation*}
+
+Then we have three cases:
+
+for $w < 0$, $F_{\eta}(w) = 0$
+
+for $0 \leq w \leq 1$, $F_{\eta}(w) = P(x \leq \sqrt{w}) = \sqrt{w}$
+
+for $w > 1$, $F_{\eta}(w) = 1$
+
+So we have that:
+
+\begin{equation*}
+    F_{\eta}(w) = \begin{cases}
+        0        & \text{if } w < 0           \\
+        \sqrt{w} & \text{if } 0 \leq w \leq 1 \\
+        1        & \text{if } w > 1
+    \end{cases}
+\end{equation*}
+
+\subsection*{Use the formula to compute expectations by formula of distribution function and compare the results}
+
+We have that the expectation of a r.v. is defined as:
+
+\begin{equation*}
+    E(\xi) = \int_{-\infty}^{\infty} x f_\xi(x) dx
+\end{equation*}
+
+Where $f_\xi(x)$ is the probability density function.
+
+So let's find the probability density function for $\xi$ and $\eta$:
+
+We have that the density function is the derivative of the distribution function.
+
+So for $\xi$:
+
+\begin{equation*}
+    f_\xi(w) = \frac{d}{dw} F_\xi(w) = \frac{d}{dw} \begin{cases}
+        0           & \text{if } w < 0           \\
+        \sqrt[3]{w} & \text{if } 0 \leq w \leq 1 \\
+        1           & \text{if } w > 1
+    \end{cases} = \begin{cases}
+        0                            & \text{if } w < 0           \\
+        \frac{1}{3} w^{-\frac{2}{3}} & \text{if } 0 \leq w \leq 1 \\
+        0                            & \text{if } w > 1
+    \end{cases}
+\end{equation*}
+
+And for $\eta$:
+
+\begin{equation*}
+    f_\eta(w) = \frac{d}{dw} F_\eta(w) = \frac{d}{dw} \begin{cases}
+        0        & \text{if } w < 0           \\
+        \sqrt{w} & \text{if } 0 \leq w \leq 1 \\
+        1        & \text{if } w > 1
+    \end{cases} = \begin{cases}
+        0                            & \text{if } w < 0           \\
+        \frac{1}{2} w^{-\frac{1}{2}} & \text{if } 0 \leq w \leq 1 \\
+        0                            & \text{if } w > 1
+    \end{cases}
+\end{equation*}
+
+So now let's use the formula for the expectation:
+
+for $\xi$:
+
+\begin{equation*}
+    E(\xi) = \int_{-\infty}^{\infty} x f_\xi(x) dx = \int_{0}^{1} x \frac{1}{3} x^{-\frac{2}{3}} dx = \frac{1}{3} \int_{0}^{1} x^{\frac{1}{3}} dx = \frac{1}{3} \frac{3}{4} x^{\frac{4}{3}} \Big|_{0}^{1} = \frac{1}{4}
+\end{equation*}
+
+And for $\eta$:
+
+\begin{equation*}
+    E(\eta) = \int_{-\infty}^{\infty} x f_\eta(x) dx = \int_{0}^{1} x \frac{1}{2} x^{-\frac{1}{2}} dx = \frac{1}{2} \int_{0}^{1} x^{\frac{1}{2}} dx = \frac{1}{2} \frac{2}{3} x^{\frac{3}{2}} \Big|_{0}^{1} = \frac{1}{3}
+\end{equation*}
+
+So we have that both results are the same as the ones we got in the first part of the problem.
