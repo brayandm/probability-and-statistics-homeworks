@@ -78,3 +78,25 @@ So the probability density of the first component $\alpha$ is:
         0                                  & |x| > 1.
     \end{cases}
 \end{equation}
+
+\subsection*{Solution (c)}
+
+The random variable \(\rho\) represents the distance from the origin to the point \((\alpha, \beta)\) in the upper half of the unit circle. The cumulative distribution function (CDF) of \(\rho\) is the probability that \(\rho\) is less than or equal to a certain value \(r\), which is the area of the upper half of the circle with radius \(r\) divided by the total area of the unit circle. For \(0 \leq r \leq 1\), this area is \(\frac{1}{2} \pi r^2\). Therefore, the CDF of \(\rho\) is:
+
+\[ F_{\rho}(r) = \frac{\frac{1}{2} \pi r^2}{\frac{1}{2} \pi} = r^2 \]
+
+The probability density function (PDF) is the derivative of the CDF. Thus,
+
+\[ f_{\rho}(r) = \frac{d}{dr} F_{\rho}(r) = 2r \]
+
+So the probability density of \(\rho\) is:
+
+\begin{equation}
+    f_\rho(r) =
+    \begin{cases}
+        2r & 0 \leq r \leq 1,         \\
+        0  & r < 0 \text{ or } r > 1.
+    \end{cases}
+\end{equation}
+
+\includegraphics[width=\textwidth]{images/p1.png}
