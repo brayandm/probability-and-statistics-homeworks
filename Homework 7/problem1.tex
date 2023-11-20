@@ -100,3 +100,58 @@ So the probability density of \(\rho\) is:
 \end{equation}
 
 \includegraphics[width=\textwidth]{images/p1.png}
+
+\subsection*{Solution (d)}
+
+We can notice that $a$ is the adjacent side of a right triangle
+with hypotenuse $\rho = \sqrt{\alpha^2 + \beta^2}$ and opposite
+side $\beta$. So we can use the definition of cosine:
+
+\begin{equation}
+    \cos(\phi)  \frac{\alpha}{\sqrt{\alpha^2 + \beta^2}}
+\end{equation}
+
+So then:
+
+\begin{equation}
+    \arccos(\frac{\alpha}{\sqrt{\alpha^2 + \beta^2}}) = \arccos(\cos(\phi)) = \phi
+\end{equation}
+
+The the problem is equivalent to finding the probability density of $\phi$,
+where $\phi$ is the angle between the vector $(\alpha, \beta)$ and the $x$ axis.
+
+Let's find the CDF of $\phi$. The CDF of $\phi$ is the probability that
+$\phi$ is less than or equal to a certain value $\theta$, which is the
+area of the region $\mathcal{G}_\theta$ divided by the total area of
+the region $\mathcal{G}$. The region $\mathcal{G}_\theta$ is the regio
+n between the $x$ axis and the line that makes an angle $\theta$ with
+the $x$ axis. The total area of the region $\mathcal{G}$ is $\pi / 2$.
+
+To find the area of the region $\mathcal{G}_\theta$, we can just
+find the area of a sector of a circle with radius $r$ and angle $\theta$,
+this area can be easily calculated as $\frac{1}{2} r^2 \theta$.
+
+So the CDF of $\phi$ is:
+
+\begin{equation}
+    F_\phi(\theta) = \frac{\frac{1}{2} \theta}{\frac{1}{2} \pi} = \frac{\theta}{\pi}
+\end{equation}
+
+The PDF of $\phi$ is the derivative of the CDF. So:
+
+\begin{equation}
+    f_\phi(\theta) = \frac{d}{d\theta} F_\phi(\theta) = \frac{1}{\pi}
+\end{equation}
+
+Then because the angle $\phi$ is between $0$ and $\pi$, and for
+the other values the PDF is $0$, we get:
+
+\begin{equation}
+    f_\phi(\theta) =
+    \begin{cases}
+        \frac{1}{\pi} & 0 \leq \theta \leq \pi,              \\
+        0             & \theta < 0 \text{ or } \theta > \pi.
+    \end{cases}
+\end{equation}
+
+\includegraphics[width=\textwidth]{images/p2.png}
