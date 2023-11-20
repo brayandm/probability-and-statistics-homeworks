@@ -17,3 +17,64 @@ Let the random vector $(\alpha, \beta)$ is uniformely distributed in $\mathcal{G
 (c) Find the probability density of $\rho = \sqrt{\alpha^2 + \beta^2}$. Plot the function $f_\rho(t)$.
 
 (d) Find the probability density of $\phi = \arccos(\alpha/\sqrt{\alpha^2 + \beta^2})$. Plot the function $f_\phi(t)$.
+
+\subsection*{Solution (a)}
+
+To find the constant value, we need to find the value of $c$ such that the integral of the function $f_{(\alpha, \beta)}(x, y)$ over the region $\mathcal{G}$ is equal to $1$.
+
+\begin{equation}
+    \int_{\mathcal{G}} f_{(\alpha, \beta)}(x, y) \, dx \, dy = 1
+\end{equation}
+
+\begin{equation}
+    \int_{\mathcal{G}} c \cdot \, dx \, dy = 1
+\end{equation}
+
+\begin{equation}
+    c \cdot  \int_{\mathcal{G}}\, dx \, dy = 1
+\end{equation}
+
+And because the integral $ \int_{\mathcal{G}}\, dx \, dy$ is equal
+to the area of the region $\mathcal{G}$. So because the area of
+a circle is $\pi r^2$ and we are taking only the upper half of the circle,
+the area of the region $\mathcal{G}$ is $\pi \cdot 1^2 / 2 = \pi / 2$.
+
+\begin{equation}
+    c \cdot \frac{\pi}{2} = 1
+\end{equation}
+
+\begin{equation}
+    c = \frac{2}{\pi}
+\end{equation}
+
+\subsection*{Solution (b)}
+
+To find the probability density $f_\alpha(x)$ of the first component $\alpha$, we need to integrate the function $f_{(\alpha, \beta)}(x, y)$ over the second component $\beta$.
+
+\begin{equation}
+    f_\alpha(x) = \int_{-\infty}^{\infty} f_{(\alpha, \beta)}(x, y) \, dy
+\end{equation}
+
+We can notice that for $|x| > 1$, the function $f_{(\alpha, \beta)}(x, y)$
+is equal to $0$, so we only need to integrate over the region $|x| \leq 1$.
+And because the $y$ component is always positive, we can integrate from $0$ to $\sqrt{1 - x^2}$.
+
+\begin{equation}
+    f_\alpha(x) = \int_{0}^{\sqrt{1 - x^2}} \frac{2}{\pi} \, dy
+\end{equation}
+
+Solving the integral, we get:
+
+\begin{equation}
+    f_\alpha(x) = \frac{2}{\pi} \cdot \sqrt{1 - x^2}
+\end{equation}
+
+So the probability density of the first component $\alpha$ is:
+
+\begin{equation}
+    f_\alpha(x) =
+    \begin{cases}
+        \frac{2}{\pi} \cdot \sqrt{1 - x^2} & |x| \leq 1, \\
+        0                                  & |x| > 1.
+    \end{cases}
+\end{equation}
