@@ -1,0 +1,66 @@
+\section*{Statement Problem 2}
+
+Let $\alpha$ be a random variable uniformly distributed over $[-1, +1]$, and the
+random variable $\beta = F_{\alpha}(\alpha)$, i.e., $\beta$ is the
+composition $\Omega \overset{\alpha}{\rightarrow} \mathbb{R} \overset{F_{\alpha}()}{\rightarrow} \mathbb{R}$.
+Find the distribution function $F_{\beta}(x)$.
+
+\section*{Solution Problem 2}
+
+First let's find the density function $f_{\alpha}(x)$ for $x \in \mathbb{R}$:
+
+Because $\alpha$ is uniformly distributed over $[-1, +1]$, the density function
+is $f_{\alpha}(x) = \frac{1}{2}$, for $x \in [-1, +1]$.
+
+Now let's find the distribution function $F_{\alpha}(x)$ for $x \in \mathbb{R}$:
+
+The first case is when $x < -1$, but because $\alpha$ only takes values in
+$[-1, +1]$, the distribution function is $F_{\alpha}(x) = 0$, for $x < -1$.
+
+The second case is when $-1 \leq x \leq 1$, so we can integrate the density function
+$f_{\alpha}(x)$ in the interval $[-1, x]$:
+
+\begin{equation}
+    F_{\alpha}(x) = \int_{-1}^{x} f_{\alpha}(x) dx = \int_{-1}^{x} \frac{1}{2} dx = \frac{x + 1}{2}
+\end{equation}
+
+The third case is when $x > 1$, but because $\alpha$ only takes values in
+$[-1, +1]$, the distribution function is $F_{\alpha}(x) = 1$, for $x > 1$.
+
+So the distribution function $F_{\alpha}(x)$ is:
+
+\begin{equation}
+    F_{\alpha}(x) = \begin{cases}
+        0,               & \text{if } x < -1           \\
+        \frac{x + 1}{2}, & \text{if } -1 \leq x \leq 1 \\
+        1,               & \text{if } x > 1
+    \end{cases}
+\end{equation}
+
+Now we have that $\beta = F_{\alpha}(\alpha)$. Then by definition of distribution function
+we have that $F_{\beta}(x) = P(\beta \leq x) = P(F_{\alpha}(\alpha) \leq x)$.
+
+The first case is when $x < 0$, but because $\beta$ only takes values in
+$[0, 1]$, the distribution function is $F_{\beta}(x) = 0$, for $x < 0$.
+
+The second case is when $0 \leq x \leq 1$, so we can use the definition of
+distribution function:
+
+\begin{equation}
+    F_{\beta}(x) = P(F_{\alpha}(\alpha) \leq x) = P(\alpha \leq F_{\alpha}^{-1}(x)) = F_{\alpha}(F_{\alpha}^{-1}(x)) = x
+\end{equation}
+
+Note that $F_{\alpha}^{-1}(x) = 2x - 1$, because $F_{\alpha}(x) = \frac{x + 1}{2}$, so $F_{\alpha}$ is invertible.
+
+The third case is when $x > 1$, but because $\beta$ only takes values in
+$[0, 1]$, the distribution function is $F_{\beta}(x) = 1$, for $x > 1$.
+
+So the distribution function $F_{\beta}(x)$ is:
+
+\begin{equation}
+    F_{\beta}(x) = \begin{cases}
+        0, & \text{if } x < 0           \\
+        x, & \text{if } 0 \leq x \leq 1 \\
+        1, & \text{if } x > 1
+    \end{cases}
+\end{equation}

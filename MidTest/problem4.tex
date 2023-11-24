@@ -1,0 +1,31 @@
+\section*{Statement Problem 4}
+
+There are three values $x_1$, $x_2$, $x_3$ from random generator \textit{rand}. Event A: $x_1 + x_2 + x_3 < 1$, event B: $x_1 < x_2$, event C: $x_1^2 + x_2^2 < 1$, event D: $x_1^2 + x_2^2 + x_3^2 < 1$. Find dependent and independent
+
+\section*{Solution Problem 4}
+
+First I assume that the random generator \textit{rand} is uniformly distributed over $[0, 1]$.
+
+1. Event A (\(x_1 + x_2 + x_3 < 1\)): This event is about the sum of three uniformly distributed random variables being less than 1. This is a geometric condition within the unit cube in 3D space.
+
+2. Event B (\(x_1 < x_2\)): This event is a comparison between \(x_1\) and \(x_2\), irrespective of their individual values.
+
+3. Event C (\(x_1^2 + x_2^2 < 1\)): This event describes a circle (or disc) in the 2D plane formed by \(x_1\) and \(x_2\).
+
+4. Event D (\(x_1^2 + x_2^2 + x_3^2 < 1\)): This is the condition for a point (\(x_1\), \(x_2\), \(x_3\)) to be inside a unit sphere in 3D space.
+
+To determine independence, recall that two events A and B are independent if \(P(A \cap B) = P(A)P(B)\). For dependence, it means that the occurrence of one event influences the probability of the other.
+
+- \textbf{A and B}: These events are independent. The comparison of \(x_1\) and \(x_2\) in B does not affect the probability of their sum with \(x_3\) being less than 1.
+
+- \textbf{A and C}: These are also likely dependent. The constraint on \(x_1\) and \(x_2\) in C (being within a unit circle) can affect the probability of their sum with \(x_3\) being less than 1.
+
+- \textbf{A and D}: They are dependent. The condition for D (points within a unit sphere) restricts the possible values for the sum \(x_1 + x_2 + x_3\), influencing the probability of A.
+
+- \textbf{B and C}: These events are independent. The comparison of \(x_1\) and \(x_2\) in B does not affect the condition of them lying within a unit circle in C.
+
+- \textbf{B and D}: Independent. The relationship between \(x_1\) and \(x_2\) does not influence whether the point lies inside the unit sphere.
+
+- \textbf{C and D}: These events are dependent. Both involve geometric constraints on \(x_1\), \(x_2\), and \(x_3\), and the condition in D (inside a sphere) influences the likelihood of the condition in C (inside a circle).
+
+In summary, most of these events are dependent due to their geometric and comparative nature, except for A-B, B-C and B-D, which are independent.

@@ -1,0 +1,43 @@
+\section*{Statement Problem 1}
+
+$P(A) = \frac{1}{4}, \quad P(A|B) = \frac{1}{2}, \quad P(B|A) = \frac{1}{3}$; find $P(A \cup B)$
+
+\section*{Solution Problem 1}
+
+From the definition of conditional probability we have:
+
+\begin{equation}
+    P(A|B) = \frac{P(A \cap B)}{P(B)}
+\end{equation}
+
+and
+
+\begin{equation}
+    P(B|A) = \frac{P(A \cap B)}{P(A)}
+\end{equation}
+
+Let's find $P(A \cap B)$ by using equation (2):
+
+\begin{equation}
+    P(A \cap B) = P(B|A) \cdot P(A) = \frac{1}{3} \cdot \frac{1}{4} = \frac{1}{12}
+\end{equation}
+
+Now that we have $P(A \cap B)$, we can find $P(B)$ by using equation (1):
+
+\begin{equation}
+    P(B) = \frac{P(A \cap B)}{P(A|B)} = \frac{\frac{1}{12}}{\frac{1}{2}} = \frac{1}{6}
+\end{equation}
+
+From the definition of union of events we have:
+
+\begin{equation}
+    P(A \cup B) = P(A) + P(B) - P(A \cap B)
+\end{equation}
+
+Now that we have $P(A)$, $P(B)$ and $P(A \cap B)$, we can find $P(A \cup B)$ by using equation (5):
+
+\begin{equation}
+    P(A \cup B) = \frac{1}{4} + \frac{1}{6} - \frac{1}{12} = \frac{4}{12} = \frac{1}{3}
+\end{equation}
+
+So the value of $P(A \cup B)$ is $\frac{1}{3}$.

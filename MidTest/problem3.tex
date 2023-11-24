@@ -1,0 +1,27 @@
+\section*{Statement Problem 3}
+
+Ivan and Peter arrive independently at the bar at random times from noon to 1 p.m. Is the length of the time interval while one visitor waited for another visitor dependent on the time of arrival of the first visitor?
+
+\section*{Solution Problem 3}
+
+This problem can be analyzed using concepts from probability and statistics, specifically those related to random variables and independence.
+
+Let's define the random variables:
+
+\( X \): the time at which Ivan arrives, measured in minutes after noon.
+
+\( Y \): the time at which Peter arrives, also measured in minutes after noon.
+
+Both \( X \) and \( Y \) are uniformly distributed over the interval [0, 60] minutes, assuming that their arrival times are random and independent between noon and 1 p.m.
+
+Now, let's consider the time interval \( Z \) that one visitor waits for the other. There are two scenarios:
+
+1. If Ivan arrives before Peter (\( X < Y \)), then the waiting time is \( Y - X \).
+
+2. If Peter arrives before Ivan (\( Y < X \)), then the waiting time is \( X - Y \).
+
+The key question is whether the length of \( Z \) is dependent on the arrival time of the first visitor. To determine this, we need to consider the independence of the random variables \( X \) and \( Y \).
+
+Since \( X \) and \( Y \) are independent, the waiting time \( Z \) is solely a function of the difference between \( X \) and \( Y \), and it does not depend on who arrives first or the actual times of arrival. This is because the difference in times \( |X - Y| \) will have the same distribution regardless of the values of \( X \) and \( Y \).
+
+In conclusion, the length of the time interval while one visitor waited for another is not dependent on the time of arrival of the first visitor. It only depends on the difference between their arrival times, which, given the independence and uniform distribution of both arrival times, does not depend on who arrives first or at what specific time they arrive.

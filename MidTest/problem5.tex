@@ -1,0 +1,62 @@
+\section*{Statement Problem 5}
+
+Let $\alpha$ be a random variable uniformly distributed over $[-1, +1]$, find the distribution function of the random variable $\beta = \alpha \cdot \textbf{1}_{\{\alpha > 0\}}$. Find the distribution function $F_\beta(x)$.
+
+
+\section*{Solution Problem 5}
+
+First let's notice that if $\alpha \leq 0$, then $\beta = \alpha \cdot \textbf{1}_{\{\alpha > 0\}} = \alpha \cdot 0 = 0$.
+
+And if $\alpha > 0$, then $\beta = \alpha \cdot \textbf{1}_{\{\alpha > 0\}} = \alpha \cdot 1 = \alpha$.
+
+Let's find the density function $f_\beta(x)$ for $x \in \mathbb{R}$:
+
+The first case is when $x < 0$, but because $\beta$ only takes values in $[0, 1]$, the density function is $f_\beta(x) = 0$, for $x < 0$.
+
+The second case is when $x = 0$, in this case we have that if $\alpha$ takes values in $[-1, 0]$ then $\beta = 0$, otherwise
+$\beta$ takes positive values. So the probability that $\beta = 0$ is $\frac{1}{2}$ (because $\alpha$ is uniformly distributed
+over $[-1, +1]$, and the halve of numbers in $[-1, +1]$ are negative).
+
+The third case is when $x > 0$, in this case we have that $\beta = \alpha$, and because $\alpha$ is uniformly distributed
+over $[-1, +1]$, the density function is $f_\beta(x) = \frac{1}{2}$, for $x \in (0, 1]$.
+
+The fourth case is when $x > 1$, but because $\beta$ only takes values in $[0, 1]$, the density function is $f_\beta(x) = 0$, for $x > 1$.
+
+So the density function $f_\beta(x)$ is:
+
+\begin{equation}
+    f_\beta(x) = \begin{cases}
+        0,           & \text{if } x < 0        \\
+        \frac{1}{2}, & \text{if } x = 0        \\
+        \frac{1}{2}, & \text{if } x \in (0, 1] \\
+        0,           & \text{if } x > 1
+    \end{cases}
+\end{equation}
+
+Now let's find the distribution function $F_\beta(x)$ for $x \in \mathbb{R}$ by integrating the density function $f_\beta(x)$:
+
+The first case is when $x < 0$, but because $\beta$ only takes values in $[0, 1]$, the distribution function is $F_\beta(x) = 0$, for $x < 0$.
+
+The second case is when $x = 0$, in this case we are dealing with a discontinuity or discrete problem, so because
+the probability that $\beta = 0$ is $\frac{1}{2}$ and because for $x < 0$ we have that $F_\beta(x) = 0$, we have that
+$F_\beta(x) = \frac{1}{2}$, for $x = 0$.
+
+The third case is when $x > 0$, so we can integrate the density function $f_\beta(x)$ in the interval $(0, 1]$, but
+we need to take into account the current accumulation of probability mass, so we have that:
+
+\begin{equation}
+    F_\beta(x) = \int_{0}^{x} f_\beta(x) dx + \frac{1}{2} = \int_{0}^{x} \frac{1}{2} dx  + \frac{1}{2} = \frac{x}{2} + \frac{1}{2} = \frac{x + 1}{2}
+\end{equation}
+
+The fourth case is when $x > 1$, but because $\beta$ only takes values in $[0, 1]$, the distribution function is $F_\beta(x) = 1$, for $x > 1$.
+
+So the distribution function $F_\beta(x)$ is:
+
+\begin{equation}
+    F_\beta(x) = \begin{cases}
+        0,               & \text{if } x < 0        \\
+        \frac{1}{2},     & \text{if } x = 0        \\
+        \frac{x + 1}{2}, & \text{if } x \in (0, 1] \\
+        1,               & \text{if } x > 1
+    \end{cases}
+\end{equation}
