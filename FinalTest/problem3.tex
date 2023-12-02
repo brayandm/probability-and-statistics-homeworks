@@ -1,0 +1,64 @@
+\section*{Solution Problem 3}
+
+To find the distribution function and probability density function (PDF)
+of \(\mu = \beta / \alpha\), where \(\alpha\) and \(\beta\) are independent
+random variables uniformly distributed over \([1, 2]\) and \([0, 1]\) respectively,
+we can make a geometric approach. Notice that the total area of the square
+$[0, 1] \times [1, 2]$ is 1 so the probability of $\alpha$ and $\beta$ being
+in this square is 1.
+
+Note that $\beta = \mu \alpha$
+
+To find the distribution function $F_{\mu}(x)$, we can use the following:
+
+\[ F_{\mu}(x) = P(\mu \leq x) = P(\beta / \alpha \leq x) = P(\beta \leq x \alpha) \]
+
+Then to be $\beta \leq x \alpha$, $\beta$ must be in the interval $[0, x \alpha]$
+for $\alpha \in [1, 2]$.
+
+Geometrically, $x \alpha$ is the line $y = x \alpha$ and we can notice that
+there are two main cases:
+
+1) $0 < x \leq \frac{1}{2}$: In this case, the line $y = x \alpha$ is going up
+until intersecting upper right corner of the square $[0, 1] \times [1, 2]$.
+
+to calculate this probability, we can integrate the area under the line
+$y = x \alpha$ from $1$ to $2$:
+
+\[ F_{\mu}(x) = \int_{1}^{2} x \alpha d\alpha = \frac{1}{2} x \alpha^2 \Big|_{1}^{2} = \frac{3}{2}x \]
+
+2) $\frac{1}{2} < x \leq 1$: In this case, the line $y = x \alpha$ is going up
+until intersecting upper left corner of the square $[0, 1] \times [1, 2]$.
+
+In this case we can notice that the complementary of the area under
+the line $y = x \alpha$ is the area of the triangle with vertices made
+by the upper left corner of the square $[0, 1] \times [1, 2]$, the intersection
+of the line $y = x \alpha$ with left side of the square, and
+the intersection of the line $y = x \alpha$ with the top side of the square.
+
+This vertices are $(1, 1)$, $(1, x)$, and $(\frac{1}{x}, 1)$ respectively.
+
+The area is calculated by formula of right triangle:
+
+The base is $1 - x$ and the height is $\frac{1}{x} - 1$
+
+So the area is $\frac{1}{2} (1 - x) (\frac{1}{x} - 1) = \frac{1}{2} (\frac{1}{x}-1-1+x)
+    = \frac{1}{2} (\frac{1}{x} - 2 + x) = \frac{1}{2x} - 1 + x/2$
+
+Then the distribution function is:
+
+\[ F_{\mu}(x) = \begin{cases}
+        0                      & \text{if } x \leq 0               \\
+        \frac{3}{2}x           & \text{if } 0 < x \leq \frac{1}{2} \\
+        \frac{1}{2x} - 1 + x/2 & \text{if } \frac{1}{2} < x \leq 1 \\
+        1                      & \text{if } x > 1
+    \end{cases} \]
+
+To find the probability density function $f_{\mu}(x)$, we can derive the
+distribution function:
+
+\[ f_{\mu}(x) = \begin{cases}
+        \frac{3}{2}           & \text{if } 0 < x \leq \frac{1}{2} \\
+        -\frac{1}{2x^2} + 1/2 & \text{if } \frac{1}{2} < x \leq 1 \\
+        0                     & \text{otherwise}
+    \end{cases} \]

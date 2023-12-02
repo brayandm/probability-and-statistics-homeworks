@@ -1,0 +1,111 @@
+\section*{Solution Problem 5}
+
+\textbf{Finding Expected Value of $\xi$}
+
+To find the expected value of \(\xi\) we need to calculate the integral of \(\xi f_{\xi}(\xi)\) over the range where \(f_{\xi}(\xi)\) is non-zero.
+
+- For \(\xi \in [1, 2]\), \(f_{\xi}(\xi) = \xi - 1\).
+- For \(\xi \in [2, 3]\), \(f_{\xi}(\xi) = 3 - \xi\).
+- For other values of \(\xi\), \(f_{\xi}(\xi) = 0\).
+
+The expected value \(E[\xi]\) is then given by:
+
+\[
+    E[\xi] = \int_{1}^{2} \xi(\xi - 1) d\xi + \int_{2}^{3} \xi(3 - \xi) d\xi
+\]
+
+Let's calculate this integral.
+
+1. For \(\xi \in [1, 2]\), the pdf is \(f_{\xi}(\xi) = \xi - 1\). The integral for this part is:
+
+\[
+    \int_{1}^{2} \xi(\xi - 1) d\xi = \int_{1}^{2} (\xi^2 - \xi) d\xi
+\]
+
+To solve this, we integrate term by term:
+
+\[
+    \int_{1}^{2} \xi^2 d\xi - \int_{1}^{2} \xi d\xi
+\]
+
+The antiderivative of \(\xi^2\) is \(\frac{1}{3}\xi^3\), and the antiderivative of \(\xi\) is \(\frac{1}{2}\xi^2\). Applying the limits of integration:
+
+\[
+    \left[\frac{1}{3}\xi^3\right]_{1}^{2} - \left[\frac{1}{2}\xi^2\right]_{1}^{2} = \left(\frac{1}{3} \cdot 2^3 - \frac{1}{3} \cdot 1^3\right) - \left(\frac{1}{2} \cdot 2^2 - \frac{1}{2} \cdot 1^2\right)
+\]
+
+Simplifying this gives:
+
+\[
+    \left(\frac{8}{3} - \frac{1}{3}\right) - \left(2 - \frac{1}{2}\right) = \frac{7}{3} - \frac{3}{2} = \frac{14 - 9}{6} = \frac{5}{6}
+\]
+
+2. For \(\xi \in [2, 3]\), the pdf is \(f_{\xi}(\xi) = 3 - \xi\). The integral for this part is:
+
+\[
+    \int_{2}^{3} \xi(3 - \xi) d\xi = \int_{2}^{3} (3\xi - \xi^2) d\xi
+\]
+
+Again, we integrate term by term:
+
+\[
+    \int_{2}^{3} 3\xi d\xi - \int_{2}^{3} \xi^2 d\xi
+\]
+
+The antiderivative of \(3\xi\) is \(\frac{3}{2}\xi^2\), and the antiderivative of \(\xi^2\) is \(\frac{1}{3}\xi^3\). Applying the limits of integration:
+
+\[
+    \left[\frac{3}{2}\xi^2\right]_{2}^{3} - \left[\frac{1}{3}\xi^3\right]_{2}^{3} = \left(\frac{3}{2} \cdot 3^2 - \frac{3}{2} \cdot 2^2\right) - \left(\frac{1}{3} \cdot 3^3 - \frac{1}{3} \cdot 2^3\right)
+\]
+
+Simplifying this gives:
+
+\[
+    \left(\frac{27}{2} - 6\right) - \left(9 - \frac{8}{3}\right) = \frac{15}{2} - \frac{19}{3} = \frac{45 - 38}{6} = \frac{7}{6}
+\]
+
+Adding these two results together:
+
+\[
+    \frac{5}{6} + \frac{7}{6} = \frac{12}{6} = 2
+\]
+
+So, the expected value \(E[\xi]\) is \(2\).
+
+\textbf{Finding Expected Value of $\mu$}
+
+To find the expected value of $\mu$, we can use the following formula:
+
+\[ E(\mu) = \int_{-\infty}^{\infty} x f_{\mu}(x) dx \]
+
+We already know the PDF of $\mu$ from problem 3:
+
+\[ f_{\mu}(x) = \begin{cases}
+        0                      & otherwise                         \\
+        \frac{3}{2}x           & \text{if } 0 < x \leq \frac{1}{2} \\
+        \frac{1}{2x} - 1 + x/2 & \text{if } \frac{1}{2} < x \leq 1 \\
+    \end{cases} \]
+
+
+So we can calculate the expected value of $\mu$ as follows:
+
+\[ E(\mu) = \int_{0}^{\frac{1}{2}} x \frac{3}{2}x dx + \int_{\frac{1}{2}}^{1} x (\frac{1}{2x} - 1 + x/2) dx \]
+
+\[ E(\mu) = \frac{3}{2} \int_{0}^{\frac{1}{2}} x^2 dx + \int_{\frac{1}{2}}^{1} (\frac{1}{2} - x + x^2/2) dx \]
+
+\[ E(\mu) = (\frac{3}{2} \frac{1}{3} x^3 )\Big|_{0}^{\frac{1}{2}} + (\frac{1}{2} x - \frac{1}{2} x^2 + \frac{1}{6} x^3 )\Big|_{\frac{1}{2}}^{1} \]
+
+\[ E(\mu) = \frac{1}{8} + \left(\frac{1}{2} - \frac{1}{2} + \frac{1}{6}\right) - \left(\frac{1}{4} - \frac{1}{8} + \frac{1}{48}\right) \]
+
+
+\[ E(\mu) = \frac{1}{8} + \frac{1}{6} - \left(\frac{1}{4} - \frac{1}{8} + \frac{1}{48}\right) \]
+
+\[ E(\mu) = \frac{1}{8} + \frac{1}{6} - \left(\frac{3}{24} - \frac{1}{8} + \frac{1}{48}\right) \]
+
+\[ E(\mu) = \frac{1}{8} + \frac{1}{6} - \left(\frac{1}{8} - \frac{1}{8} + \frac{1}{48}\right) \]
+
+\[ E(\mu) = \frac{1}{8} + \frac{1}{6} - \frac{1}{48} \]
+
+\[ E(\mu) = \frac{6}{48} + \frac{8}{48} - \frac{1}{48} \]
+
+\[ E(\mu) = \frac{13}{48} \]

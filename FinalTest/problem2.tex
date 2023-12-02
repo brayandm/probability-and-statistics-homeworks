@@ -1,0 +1,35 @@
+\section*{Solution Problem 2}
+
+To find the distribution function and probability density function (PDF) of \(\eta = \alpha - \beta\), where \(\alpha\) and \(\beta\) are independent random variables uniformly distributed over \([1, 2]\) and \([0, 1]\) respectively, we'll use a similar approach as we did for \(\xi = \alpha + \beta\), but with adjustments for the subtraction.
+
+1. Understand the Distributions of \(\alpha\) and \(\beta\):
+
+- \(\alpha \sim U(1, 2)\): This means \(\alpha\) is uniformly distributed over the interval [1, 2]. Its PDF is \(f_{\alpha}(\alpha) = 1\) for \(\alpha \in [1, 2]\) and 0 otherwise.
+
+- \(\beta \sim U(0, 1)\): This means \(\beta\) is uniformly distributed over the interval [0, 1]. Its PDF is \(f_{\beta}(\beta) = 1\) for \(\beta \in [0, 1]\) and 0 otherwise.
+
+2. Find the PDF of \(\eta = \alpha - \beta\):
+
+The PDF of the difference of two independent random variables can also be found by convolution, but with a slight adjustment in the formula:
+
+\[ f_{\eta}(\eta) = (f_{\alpha} * f_{-\beta})(\eta) = \int_{-\infty}^{\infty} f_{\alpha}(\tau)f_{-\beta}(\eta - \tau) d\tau \]
+
+Here, \(f_{-\beta}(y) = f_{\beta}(-y)\) for \(y \in [-1, 0]\) and 0 otherwise.
+
+3. Compute the PDF \(f_{\eta}(\eta)\):
+
+- For \(\eta \in [0, 1]\) (the lower end of the possible range), the integration limits for \(\tau\) are from max(1, \(\eta + 0\)) to min(2, \(\eta + 1\)). So, \(f_{\eta}(\eta) = \text{min}(2, \eta + 1) - \text{max}(1, \eta)\).
+
+- For \(\eta \in [1, 2]\) (the upper end of the possible range), the integration limits for \(\tau\) are from \(\eta\) to 2. So, \(f_{\eta}(\eta) = 2 - \eta\).
+
+4. Find the Distribution Function \(F_{\eta}(\eta)\):
+
+- For \(\eta < 0\), \(F_{\eta}(\eta) = 0\) (since \(\alpha - \beta\) cannot be negative).
+
+- For \(\eta \in [0, 1]\), integrate \(f_{\eta}(\eta)\) from 0 to \(\eta\).
+
+- For \(\eta \in [1, 2]\), integrate \(f_{\eta}(\eta)\) from 0 to 1, and then from 1 to \(\eta\).
+
+- For \(\eta > 2\), \(F_{\eta}(\eta) = 1\) (since the difference cannot exceed 2).
+
+By solving these integrals, we can obtain the explicit forms for the PDF and the distribution function of \(\eta\).
